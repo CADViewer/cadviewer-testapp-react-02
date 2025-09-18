@@ -49,19 +49,6 @@ const config = {
 "ShowInformativeBottomPanel": true,                    // initial show the bottom panel
 "ShowInformativeLeftPanel": false,                     // initia show the left side panel
 
-//    Global Application Files
-//   Global location for property / plans navigation:
-"globalApplicationFilesLocation" :"https://bpybipowerbi.z19.web.core.windows.net/cadviewer/json/application/",
-"globalApplicationPlans" :"plans.json",
-"globalApplicationViews" :"views.json",
-//    Property Specific Files
-"propertySVGFilesLocation" :"https://bpybipowerbi.z19.web.core.windows.net/cadviewer/svg/",  // + property.svg
-"propertyJSONFilesLocation" :"https://bpybipowerbi.z19.web.core.windows.net/cadviewer/json/property/", // + property.json
-
-// SAMPLE TEST FILES!!!
-//https://bpybipowerbi.z19.web.core.windows.net/cadviewer/svg/3442-LP2.svg
-//https://bpybipowerbi.z19.web.core.windows.net/cadviewer/json/property/3442-LP2.json
-
 // CADVIEWER MENU CONTROLS
 "DisplayCoordinatesMenu": false,                       // display the CADViewer coordinates menu
 "setSpaceObjectsCustomMenu" : false,                   // display the SpaceObject Navigation menu

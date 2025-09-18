@@ -10,10 +10,9 @@ const config: Config = {
     "internationalsales@tailormade.com",
   ],
   ZoomFactor: 25.0, // zoom factor for cvjs_zoomHere_ObjectId() in left panel click
-  //"ServerBackEndUrl": "https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://restapi.cadviewer.com:3000/", // "https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://restapi.cadviewer.com:3000/", //"http://localhost:3000/", //"https://restapi.cadviewer.com:3000/", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"https://restapi.cadviewer.com:3000", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/" , //"https://127.0.0.1:3000",  //"http://localhost:3000", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://localhost:3000",          //""http://localhost:3000",  //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/",           // This is the URL of the CADViewer back-end server
-  ServerBackEndUrl: "https://server.demo.cadviewer.com", //"http://localhost:3000", //"https://server.demo.cadviewer.com", //  "http://localhost:3000", // "https://server.demo.cadviewer.com", //"http"http://localhost:3000"://localhost:3000", //"https://server.demo.cadviewer.com", //"https://server.demo.cadviewer.com", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://localhost:3000", //, //"http://localhost:3000", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://restapi.cadviewer.com:3000/", // "https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://restapi.cadviewer.com:3000/", //"http://localhost:3000/", //"https://restapi.cadviewer.com:3000/", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"https://restapi.cadviewer.com:3000", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/" , //"https://127.0.0.1:3000",  //"http://localhost:3000", //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/", //"http://localhost:3000",          //""http://localhost:3000",  //"https://cadviewer-conversion-server-webapp-01.azurewebsites.net/",           // This is the URL of the CADViewer back-end server
+  ServerBackEndUrl: "http://localhost:3000",           // This is the URL of the CADViewer back-end server
   ServerLocation: "", // leave blank  in most cases
-  ServerUrl: "http://localhost:3001", //"http://vizquery.cadviewer.com", //"https://demo.cadviewer.com", //"http://localhost:3001", //"https://demo.cadviewer.com/", // "http:localhost:3001", / this is the URL of the front end server
+  ServerUrl: "http://localhost:3001", // this is the URL of the front end server
   postFixServerToken: false, // true if the server shall be contatenated with a Toke, //n, kept on the Server, use a postfixed SAS token, when loading JSON content
   bearerToken: "", //"Bearer t-7614f875-8423-4f20-a674-d7cf3096290e", // "",   // security bearer token (if not applicable, set to "")
 
@@ -22,7 +21,7 @@ const config: Config = {
   setCADViewerLanguage: "English", // Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Chinese-Simplified", "Chinese-Traditional"
 
   // "initFileName":"/content/drawings/dwg/1st floor architectural.dwg",  // the initialization drawing when loading Visual Query, based on a server path
-  initFileName: "", //"/content/demo_user/1st floor architectural_01.dwg", //"/content/custom/bpretail/bpretail-splash-05.svg", // the initialization drawing when loading Visual Query, based on a server path
+  initFileName: "", //"/content/demo_user/1st floor architectural_01.dwg", //, // the initialization drawing when loading Visual Query, based on a server path
   // "initFileName":"", // initial drawing to load, if empty, no drawing is loaded
 
   // "initFileName":"/content/drawings/dwg/1st floor architectural.dwg", // initial drawing to load, if empty, no drawing is loaded
@@ -36,7 +35,7 @@ const config: Config = {
   // cadviewer license key
 
   //    "cadviewerLicenseKey" : "00110010 00110010 00110000 00110001 00110010 00110000 00110110 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110001 00110001 00110010 00110000 00110110 00110010 00110000 00110000 00110001 00111001 00111000 00110001 00110100 00110001 00110001 00110100 00110100 00110001 00110101 00111001 00110001 00110101 00110111 00110001 00110101 00110101",
-  cadviewerLicenseKey: "00110101",
+  cadviewerLicenseKey: "00110010 00110010 00110000 00110001 00110010 00110000 00110110 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110001 00110001 00110010 00110000 00110110 00110010 00110000 00110000 00110001 00111001 00111000 00110001 00110100 00110001 00110001 00110100 00110100 00110001 00110101 00111001 00110001 00110101 00110111 00110001 00110101 00110101",
 
   // conversion parameters - these can dynamically be change in the settings modal
   //    "conversionParameters" :[{"param":"model", "value": ""}, {"param":"extents", "value": ""}, {"param":"trace", "value": ""}, {"param":"strokeall", "value": ""}, {"param":"SVGTOL", "value": "0.001"}],
@@ -797,52 +796,13 @@ const config: Config = {
   helpbutton2: "User Manual",
   helpbutton2link: "https://cadviewer.com/cadviewerusermanual/",
   customHtmlHeaderContent: `
-     <!--  Update february 6th, 2023  only installed in May 29  -->
-     <!-- Google tag (gtag.js) 2023-10-27 -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1072657467"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-     
-       gtag('config', 'AW-1072657467');
-     </script>
-     
-     
-     <!-- CRISP tag manager -->
-     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="50b89d34-074d-4a85-9a53-61c3705a2c51";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
-     
-     <!--  Cookiehub 2.8.0   PRODUCTION  -->
-     <script src="https://cdn.cookiehub.eu/c2/6524b042.js"></script>
-     <script type="text/javascript">
-     document.addEventListener("DOMContentLoaded", function(event) {
-     var cpm = {};
-     window.cookiehub.load(cpm);
-     });
-     </script>
-     <script>
-        function gtag_report_conversion(url) {
-          const callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
-          gtag('event', 'conversion', {
-            'send_to': 'AW-1072657467/o15VCOOUpa0aELvovf8D',
-            'value': 1.0,
-            'currency': 'USD',
-            'event_callback': callback
-          });
-          return false;
-        }
-     </script>
-  `,
+    <meta name="viewport" content="width=device-width, initial-scale=1">`,
   enableGeoLocation: true,
-  geolocationAPIKey: "70d6d7cb86ee89a766745277994579e77f122f1e13a4a3da81fa4150",
-  recaptchaSiteKey: "6Le297AZAAAAADTXn9TvQxRbioPu0O1mqvc28uST",
+  geolocationAPIKey: "",
+  recaptchaSiteKey: "",
 
   enableBasicAuth: false,
-  basicAuthUsername: "cadviewer",
+  basicAuthUsername: "admin",
   basicAuthPassword: "admin",
 
   // Disabled all features if not logged in
