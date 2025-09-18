@@ -1,0 +1,15 @@
+version: '3.2'
+
+
+services:
+
+  cadviewer_visualquery:
+    build: .
+    restart: always
+    ports:
+      - "3001:80"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+

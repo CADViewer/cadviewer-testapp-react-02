@@ -1,0 +1,257 @@
+{
+  "cvjs": {
+    "iconmenu": {
+      "totalpages": 4,
+      "startpage": 1,
+      "pages": [
+        [
+          {
+            "command": "cvjs_LayerList",
+            "tooltip": "Layer List"
+          },
+          {
+            "command": "cvjs_Print",
+            "tooltip": "Print"
+          },
+          {
+            "command": "cvjs_toggleBlackWhite",
+            "tooltip": "Toggle Black White"
+          },
+          {
+            "command": "cvjs_setBackgroundColor",
+            "tooltip": "Set Background Color"
+          },
+          {
+            "command": "cvjs_openFileLoadToServer",
+            "tooltip": "Open File Load to Server"
+          },
+          {
+            "command": "cvjs_interactiveSearchText",
+            "tooltip": "Interactive Search Text"
+          },
+          {
+            "command": "cvjs_interactiveLayerOff",
+            "tooltip": "Interactive Layer Off"
+          },
+          {
+            "command": "cvjs_swapLayersInDrawing",
+            "tooltip": "Swap Layers In Drawing"
+          },
+          {
+            "command": "cvjs_allLayersInDrawingOn",
+            "tooltip": "All Layers In Drawing On"
+          },
+          {
+            "command": "cvjs_Measurement",
+            "tooltip": "Measurement"
+          },
+          {
+            "command": "cvjs_calibrateMeasurement",
+            "tooltip": "Calibrate Measurement"
+          },
+          {
+            "command": "cvjs_displayMagnifyingGlass",
+            "tooltip": "Display Magnifying Glass"
+          },
+          {
+            "command": "cvjs_activateLineThicknessModal",
+            "tooltip": "Activate Line Thickness Modal"
+          },
+          {
+            "command": "cvjs_About",
+            "tooltip": "About"
+          },
+          {
+            "command": "cvjs_Settings",
+            "tooltip": "Settings"
+          }
+        ],
+        [
+          {
+            "command": "cvjs_mergeDXFDWG",
+            "tooltip": "Merge DXF DWG"
+          },
+          {
+            "command": "cvjs_publishPDF",
+            "tooltip": "Publish PDF"
+          },
+          {
+            "command": "cvjs_saveAsSVGOnServer",
+            "tooltip": "Save As SVG On Server"
+          },
+          {
+            "command": "cvjs_loadStickyNotesRedlinesUser",
+            "tooltip": "Load Sticky Notes Redlines User"
+          },
+          {
+            "command": "cvjs_saveStickyNotesRedlinesUser",
+            "tooltip": "Save Sticky Notes Redlines User"
+          },
+          {
+            "command": "cvjs_setRedlineColor",
+            "tooltip": "Set Redline Color"
+          },
+          {
+            "command": "cvjs_setRedlineThickness",
+            "tooltip": "Set Redline Thickness"
+          },
+          {
+            "command": "cvjs_drawStickyNote",
+            "tooltip": "Draw Sticky Note"
+          },
+          {
+            "command": "cvjs_drawRedlineText",
+            "tooltip": "Draw Redline Text"
+          },
+          {
+            "command": "cvjs_drawRedline_Freehand",
+            "tooltip": "Draw Redline Freehand"
+          },
+          {
+            "command": "cvjs_drawRedlineEllipseCloud",
+            "tooltip": "Draw Redline Ellipse Cloud"
+          },
+          {
+            "command": "cvjs_drawRedlineFilledPolygon",
+            "tooltip": "Draw Redline Filled Polygon"
+          },
+          {
+            "command": "cvjs_drawRedlinePolyline",
+            "tooltip": "Draw Redline Polyline"
+          },
+          {
+            "command": "cvjs_drawRedlineFilledRectangle",
+            "tooltip": "Draw Redline Filled Rectangle"
+          },
+          {
+            "command": "cvjs_drawRedlineRectangle",
+            "tooltip": "Draw Redline Rectangle"
+          },
+          {
+            "command": "cvjs_drawRedlineArrow",
+            "tooltip": "Draw Redline Arrow"
+          },
+          {
+            "command": "cvjs_deleteSingleRedline",
+            "tooltip": "Delete Single Redline"
+          },
+          {
+            "command": "cvjs_deleteLastRedline",
+            "tooltip": "Delete Last Redline"
+          },
+          {
+            "command": "cvjs_clearCurrentRedline",
+            "tooltip": "Clear Current Redline"
+          }
+        ],
+        [
+          {
+            "command": "cvjs_insertImageLink",
+            "tooltip": "Insert Image Link"
+          },
+          {
+            "command": "cvjs_loadAllImageLinks",
+            "tooltip": "Load All Image Links"
+          },
+          {
+            "command": "cvjs_saveAllImageLinks",
+            "tooltip": "Save All Image Links"
+          },
+          {
+            "command": "cvjs_clearAllImageLinks",
+            "tooltip": "Clear All Image Links"
+          },
+          {
+            "command": "cvjs_quickCount",
+            "tooltip": "Quick Count"
+          },
+          {
+            "command": "cvjs_showMeCounts",
+            "tooltip": "Show Me Counts"
+          },
+          {
+            "command": "cvjs_clearQuickCounts",
+            "tooltip": "Clear Quick Counts"
+          },
+          {
+            "command": "cvjs_compareDrawings_LoadSecondDrawing",
+            "tooltip": "Compare Drawings Load Second Drawing"
+          },
+          {
+            "command": "cvjs_compareDrawings_ToggleDrawings",
+            "tooltip": "Compare Drawings Toggle Drawings"
+          },
+          {
+            "command": "cvjs_compareDrawings_ToggleDrawingOverlay",
+            "tooltip": "Compare Drawings Toggle Drawing Overlay"
+          },
+          {
+            "command": "cvjs_exitCompareDrawings",
+            "tooltip": "Exit Compare Drawings"
+          }
+        ],
+        [
+          {
+            "command": "cvjs_customCommand_01",
+            "tooltip": "Custom Command 1"
+          },
+          {
+            "command": "cvjs_customCommand_02",
+            "tooltip": "Custom Command 2"
+          },
+          {
+            "command": "cvjs_customCommand_03",
+            "tooltip": "Custom Command 3"
+          },
+          {
+            "command": "cvjs_customCommand_04",
+            "tooltip": "Custom Command 4"
+          },
+          {
+            "command": "cvjs_customCommand_05",
+            "tooltip": "Custom Command 5"
+          },
+          {
+            "command": "cvjs_customCommand_10",
+            "tooltip": "Custom Command 10"
+          },
+          {
+            "command": "cvjs_customCommand_14",
+            "tooltip": "Custom Command 14"
+          }
+        ]
+      ],
+      "icons_per_row": 0,
+      "icon_page_left_x": 0,
+      "icon_page_left_y": 0,
+      "customcommand": {
+        "tooltip": [
+          "Command Tooltip 1",
+          "Command Tooltip 2",
+          "Command Tooltip 3",
+          "Command Tooltip 4",
+          "Command Tooltip 5",
+          "Command Tooltip 6",
+          "Command Tooltip 7",
+          "Command Tooltip 8",
+          "Command Tooltip 9",
+          "Command Tooltip 10",
+          "Command Tooltip 11",
+          "Command Tooltip 12",
+          "Command Tooltip 13",
+          "Command Tooltip 14",
+          "Command Tooltip 15",
+          "Command Tooltip 16",
+          "Command Tooltip 17",
+          "Command Tooltip 18",
+          "Command Tooltip 19",
+          "Command Tooltip 20"
+        ]
+      }
+    },
+    "zoommenu": {
+      "location_left_x": 0,
+      "location_left_y": 36
+    }
+  }
+}
