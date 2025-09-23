@@ -133,8 +133,8 @@ const config: Config = {
   currentView: [], // placeholder for the current view, set by the view menu
 
   // VISUAL QUERY PANEL CONTROLS
-  ShowInformativeBottomPanel: true, // turn the the bottom panel on off
-  ShowInformativeBottomPanelWhenClickInLeftPanel: true,
+  ShowInformativeBottomPanel: false, // turn the the bottom panel on off
+  ShowInformativeBottomPanelWhenClickInLeftPanel: false,
   ShowInformativeLeftPanel: false, // initia show the left side panel
   bottomPaneSliderMode: "withCADViewer", // withCADViewer, aboveCADViewer,
   bottomPaneDefaultHeight: 15, // (15)   percentage of screen height (2) min
@@ -446,7 +446,7 @@ const config: Config = {
 
   //*/
 
-  setUnitForCalibrate: "feet", // set base unit for calibrate modal
+  setUnitForCalibrate: "m", // set base unit for calibrate modal
   // DRAWING BASE LINE WEIGHT
   adjustMinimumLineThickness: 200, // Line minimum thickness, in percentage of the minimum line weight in the loaded drawing
 
@@ -463,7 +463,7 @@ const config: Config = {
 
   CADViewerPublicDemo: true, // set the CADViewerPublicDemo to true or false
 
-  /* SETTINGS OF THE COLORS OF SPACES  - blue base colors
+  //* SETTINGS OF THE COLORS OF SPACES  - blue base colors
 
   BaseAttributes: {
     fill: "#ffd7f4", //'#D3D300', // '#ffd7f4', // '#FFF' , //  '#D3D300', // #D3D3D3  // #FFF   #ffd7f4
@@ -493,7 +493,7 @@ const config: Config = {
   },
 //*/
 
-  setSpaceNameAsTypeInPopup: true, // set space name as type in popup to true or false
+  setSpaceNameAsTypeInPopup: false, // set space name as type in popup to true or false
 
   //            */
 
@@ -527,7 +527,7 @@ const config: Config = {
 
   //  COLOR OBJECTS FOR HIGHLIGHTS   - make fully transparent
   // Base attributes of Space Object
-  //*
+  /*
   BaseAttributes: {
     fill: "#ffffff", //'#d8e1e3', // '#ffd7f4', //'#D3D3D3',   // #FFF   #ffd7f4
     "fill-opacity": 0.0,
@@ -648,18 +648,19 @@ const config: Config = {
   //
 
   // CONTROL OF POPUP MODAL   - UNCOMMENT CONTROL OF POPUP MODAL ABOVE WHEN ACTIVATING BELOW
-  /*
-  popupCustomMenu1: "Tenant<br>Info<br>", // custom menu 1   -  my_own_clickmenu1 in CADViewer.js
+  
+  popupCustomMenu1: "Custom<br>Action 1<br>", // custom menu 1   -  my_own_clickmenu1 in CADViewer.js
   popupCustomFontAwesomeIcon1: "fa fa-info-circle", // custom menu 1 - icon 1
-  popupCustomMenu2: "Future <br>Tenant<br>", // custom menu 2 - my_own_clickmenu2 in CADViewer.js
+  popupCustomMenu2: "Custom <br>Action 2<br>", // custom menu 2 - my_own_clickmenu2 in CADViewer.js
   popupCustomFontAwesomeIcon2: "fa fa-undo", // custom menu 2  - icon 2
-*/
 
+  /*
   // popup menu settings for tenant info and future tenant
   popupCustomMenu1: "Tenant Info", // custom menu 1   -  my_own_clickmenu1 in CADViewer.js
   popupCustomFontAwesomeIcon1: "fa fa-folder-open", // custom menu 1 - icon 1
   popupCustomMenu2: "Future Tenant", // custom menu 2 - my_own_clickmenu2 in CADViewer.js
   popupCustomFontAwesomeIcon2: "fa fa-folder-open", // custom menu 2  - icon 2
+  */
 
   // popup styling
   style_popup: true, // set the popup styling to true or false

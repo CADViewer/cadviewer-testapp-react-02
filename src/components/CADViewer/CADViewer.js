@@ -679,22 +679,25 @@ const CADViewer = ({ canvasPlanId }) => {
       SpaceAreaMethods.my_own_clickmenu1();
     } else {
       var id = cadviewer.cvjs_idObjectClicked();
-      //		var node = cvjs_NodeObjectClicked();
-      const planInfo = (plansInfo?.spaces ?? []).find(
-        (planInfo) =>
-          planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ===
-          id
-      );
+      if (plansInfo!=null){
+        // Visual Query content  - users can remove this        
+        //		var node = cvjs_NodeObjectClicked();
+        const planInfo = (plansInfo?.spaces ?? []).find(
+          (planInfo) =>
+            planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ===
+            id
+        );
 
       // if (config.popupCustomMenu1.indexOf("Tenant") > -1) {
-      setTabIndex(planInfo.detailTabs[0].caption);
-      // }
-      // else{
-      // 	window.alert(
-      // 		"Custom menu item 1: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings.  Clicked object ID is: " +
-      // 			id
-      // 	);
-      // }
+        setTabIndex(planInfo.detailTabs[0].caption);
+      }
+      else{
+       	window.alert(
+       		"Custom menu item 1: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings.  Clicked object ID is: " +
+       			id
+       	);
+
+      }
     }
 
     // CH - no, shall remain open
@@ -709,24 +712,27 @@ const CADViewer = ({ canvasPlanId }) => {
     } else {
       var id = cadviewer.cvjs_idObjectClicked();
       //var node = cvjs_NodeObjectClicked();
+      if (plansInfo!=null){
+        // Visual Query content  - users can remove this
+          const planInfo = (plansInfo?.spaces ?? []).find(
+            (planInfo) =>
+              planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ===
+              id
+          );
 
-      const planInfo = (plansInfo?.spaces ?? []).find(
-        (planInfo) =>
-          planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ===
-          id
-      );
+          // if (config.popupCustomMenu1.indexOf("Tenant") > -1) {
+          setTabIndex(planInfo.detailTabs[1].caption);
+      }
+      else{
+        // user content
+       	window.alert(
+       		"Custom menu item 2: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings. Clicked object ID is: " +
+       			id
+       	);
 
-      // if (config.popupCustomMenu1.indexOf("Tenant") > -1) {
-      setTabIndex(planInfo.detailTabs[1].caption);
-      // }
-      // else{
-      // 	window.alert(
-      // 		"Custom menu item 2: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings. Clicked object ID is: " +
-      // 			id
-      // 	);
-      // }
-      // CH - no, shall remain open
-      //cadviewer.cvjs_hideOnlyPop();
+      
+      }
+
     }
   }, [setTabIndex, plansInfo]);
 
@@ -1082,6 +1088,7 @@ const CADViewer = ({ canvasPlanId }) => {
     [setSelectedSpaceObjectID]
   );
 
+  
   const myCustomPopUpBody = useCallback(
     (rmid) => {
       // set custom color on modal
@@ -1091,31 +1098,34 @@ const CADViewer = ({ canvasPlanId }) => {
       if (SpaceAreaMethods.callback_is_active()) {
         my_cvjsPopUpBody = SpaceAreaMethods.myCustomPopUpBody(rmid);
       } else {
+        // here we build our own popup menu
+
+
         console.log(
           "myCustomPopUpBody callback 1: " +
             rmid +
             " I now change the pop-up menu:"
         );
 
-        // 9.31.1
-        // we change the Type to be a custom type     newType = DBA(rmid)
+        var planInfo = null;
+        try{
+          planInfo = (plansInfo.spaces ?? []).find(
+            (planInfo) =>
+              planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ==
+              rmid
+          );
 
-        // 10.50.6
+        }
+        catch(err_planinfo){
+          console.log("NOTE: THESE ARE VISUAL QUERY RELATED CODING ONLY error planinfo:"+err_planinfo);
 
-        const planInfo = (plansInfo.spaces ?? []).find(
-          (planInfo) =>
-            planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") ==
-            rmid
-        );
-
-        /*
-			const planInfo = plansInfo.spaces.find(
-				(planInfo) => planInfo["spaceNumber"].replaceAll(".", "_").replaceAll(" ", "_") == rmid
-			);
-*/
+        }
+        
 
         console.log({ planInfo, plansInfo, rmid });
+        
         const newType = planInfo ? planInfo["spaceHeader"] : "";
+
 
         console.log(
           "myCustomPopUpBody callback 2: " +
@@ -1128,8 +1138,15 @@ const CADViewer = ({ canvasPlanId }) => {
         );
 
         if (plansInfo == undefined || plansInfo == "") {
-          // standard processing
+          // standard processing  USER CONTROLLED, NOT VISUAL QUERY
 
+          console.log(
+            "myCustomPopUpBody callback 3: " +
+              rmid +
+              " - user controlled I now change the pop-up menu:"
+          );
+
+          /*
           // 10.61.6
           my_cvjsPopUpBody =
             '<div class="cadviewer-core-styles" style="background-color: none; color: #000; ">';
@@ -1139,8 +1156,46 @@ const CADViewer = ({ canvasPlanId }) => {
             '<canvas id="dummy" width="1" height="20"></canvas><span class="fa fa-folder-open"></span> <canvas id="dummy" width="3" height="18"></canvas> <span  onclick="my_own_clickmenu2();" style="cursor: pointer;">Future Tenant Info</span><br>';
           my_cvjsPopUpBody +=
             '<canvas id="dummy" width="1" height="20"></canvas><span class="fa fa-search"></span> <canvas id="dummy" width="3" height="18"></canvas> <span onclick="cvjs_zoomHere();" style="cursor: pointer;">Zoom Here </span>';
+          */
 
-          /*
+            // need to have the latest version of the callback method
+            cadviewer.cvjs_setCallbackMethod(
+              "my_own_clickmenu1",
+              my_own_clickmenu1
+            );
+            cadviewer.cvjs_setCallbackMethod(
+              "my_own_clickmenu2",
+              my_own_clickmenu2
+            );
+
+
+            if (config.style_popup) {
+              //console.log("style popup: "+config.cvjs_styleQTip_processbody_flag+" "+config.cvjs_styleQTip_color_flag+" "+config.cvjs_styleQTip_fontsize_flag);
+              cadviewer.cvjs_styleQTip_color(
+                config.cvjs_styleQTip_color_flag,
+                config.cvjs_styleQTip_color_v1,
+                config.cvjs_styleQTip_color_v2,
+                config.cvjs_styleQTip_color_v3,
+                config.cvjs_styleQTip_color_v4,
+                config.cvjs_styleQTip_color_v5
+              );
+              cadviewer.cvjs_styleQTip_fontsize(
+                config.cvjs_styleQTip_fontsize_flag,
+                config.cvjs_styleQTip_fontsize_v1,
+                config.cvjs_styleQTip_fontsize_v2,
+                config.cvjs_styleQTip_fontsize_v3,
+                config.cvjs_styleQTip_fontsize_v4,
+                config.cvjs_styleQTip_fontsize_v5,
+                config.cvjs_styleQTip_fontsize_v6
+              );
+              cadviewer.cvjs_styleQTip_processbody(
+                config.cvjs_styleQTip_processbody_flag
+              );
+              //console.log("style popup: "+config.cvjs_styleQTip_processbody_flag+" "+config.cvjs_styleQTip_color_flag+" "+config.cvjs_styleQTip_fontsize_flag);
+            }  
+
+            // set the popup body, with the callback methods
+
             my_cvjsPopUpBody =
               '<div  class="cvjs_modal_1" id="my_own_clickmenu1()">' +
               config.popupCustomMenu1 +
@@ -1155,7 +1210,12 @@ const CADViewer = ({ canvasPlanId }) => {
               "'></i></div>";
             my_cvjsPopUpBody +=
               '<div class="cvjs_modal_1" id="cvjs_zoomHere_PopUp()">Zoom<br>Here<br><i class=\'fa fa-search-plus\'></i></div>';
-          */
+
+
+
+
+
+
         } else {
           if (newType != "") {
             //cadviewer.cvjs_changeSpaceObjectType(rmid, newType)
@@ -1262,7 +1322,25 @@ const CADViewer = ({ canvasPlanId }) => {
             */
           } else {
             // since no content loaded from json, we shut down the popup modal
-            my_cvjsPopUpBody = "";
+            // standard case, BUILD YOUR OWN POPUP
+
+
+            my_cvjsPopUpBody =
+              '<div  class="cvjs_modal_1" id="my_own_clickmenu1()">' +
+              config.popupCustomMenu1 +
+              "<i class='" +
+              config.popupCustomFontAwesomeIcon1 +
+              "'></i></div>";
+            my_cvjsPopUpBody +=
+              '<div class="cvjs_modal_1" id="my_own_clickmenu2()">' +
+              config.popupCustomMenu2 +
+              "<i class='" +
+              config.popupCustomFontAwesomeIcon2 +
+              "'></i></div>";
+            my_cvjsPopUpBody +=
+              '<div class="cvjs_modal_1" id="cvjs_zoomHere_PopUp()">Zoom<br>Here<br><i class=\'fa fa-search-plus\'></i></div>';
+
+
           }
         }
       }
