@@ -142,7 +142,6 @@ export interface Config {
   topRowItem2: string;
   topRowItem3: string;
   customOnLoadEndContent: boolean;
-
   popupCustomMenu1: string;
   popupCustomFontAwesomeIcon1: string;
   popupCustomMenu2: string;
@@ -162,6 +161,7 @@ export interface Config {
   cvjs_styleQTip_fontsize_v5: string;
   cvjs_styleQTip_fontsize_v6: string;
   cvjs_styleQTip_processbody_flag: boolean;
+  cvjs_styleQTip_width: string;
   settingsGoHomepageButtonText: string;
   enableSpaceObjectsExtraction: boolean;
   showTourInformationDialog: boolean;

@@ -678,6 +678,7 @@ const config: Config = {
   cvjs_styleQTip_fontsize_v5: "11pt", // set the fontsize v1 to 16pt
   cvjs_styleQTip_fontsize_v6: "Arial, Helvetica, sans-serif", // set the fontsize v1 to 16pt
   cvjs_styleQTip_processbody_flag: false,
+  cvjs_styleQTip_width: "220px", // set the width of the popup
 
   //   */
   //                  <command>cvjs_customCommand_20</command>   Select Property

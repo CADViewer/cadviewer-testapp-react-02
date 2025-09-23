@@ -1194,6 +1194,8 @@ const CADViewer = ({ canvasPlanId }) => {
               //console.log("style popup: "+config.cvjs_styleQTip_processbody_flag+" "+config.cvjs_styleQTip_color_flag+" "+config.cvjs_styleQTip_fontsize_flag);
             }  
 
+            cadviewer.cvjs_styleQTip_setWidth(config.cvjs_styleQTip_width);
+
             // set the popup body, with the callback methods
 
             my_cvjsPopUpBody =
@@ -1268,6 +1270,9 @@ const CADViewer = ({ canvasPlanId }) => {
             }
 
             //            my_cvjsPopUpBody = "";
+            cadviewer.cvjs_styleQTip_setWidth(config.cvjs_styleQTip_width);
+
+
 
             // 10.61.6
             my_cvjsPopUpBody =
