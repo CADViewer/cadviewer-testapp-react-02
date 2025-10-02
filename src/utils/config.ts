@@ -34,8 +34,7 @@ const config: Config = {
   // false is default,  activate the compare tool on load  example call: http://localhost:3001/?compareFile=/nodejs/cadviewer-conversion-server/content/custom/SNCF/S0001A-0001-830014-VIP22%201.dwg&compareWith=/nodejs/cadviewer-conversion-server/content/custom/SNCF/S0001A-0001-830014-VIP22%202.dwg
   // cadviewer license key
 
-  //    "cadviewerLicenseKey" : "00110010 00110010 00110000 00110001 00110010 00110000 00110110 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110001 00110001 00110010 00110000 00110110 00110010 00110000 00110000 00110001 00111001 00111000 00110001 00110100 00110001 00110001 00110100 00110100 00110001 00110101 00111001 00110001 00110101 00110111 00110001 00110101 00110101",
-  cadviewerLicenseKey: "00110010 00110010 00110000 00110001 00110010 00110000 00110110 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110001 00110001 00110010 00110000 00110110 00110010 00110000 00110000 00110001 00111001 00111000 00110001 00110100 00110001 00110001 00110100 00110100 00110001 00110101 00111001 00110001 00110101 00110111 00110001 00110101 00110101",
+  cadviewerLicenseKey: "00110010 00110010 00110000 00110000 00110010 00110000 00110110 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110010 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110010 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00111000 ",
 
   // conversion parameters - these can dynamically be change in the settings modal
   //    "conversionParameters" :[{"param":"model", "value": ""}, {"param":"extents", "value": ""}, {"param":"trace", "value": ""}, {"param":"strokeall", "value": ""}, {"param":"SVGTOL", "value": "0.001"}],
@@ -63,6 +62,16 @@ const config: Config = {
     { param: "nbe", value: "" },
     { param: "strokea", value: "" }, */
   ],
+
+
+    defaultSpaceObjectColor :{
+      fill: "#7FFFD4",
+      "fill-opacity": "0.3", // fill opacity set to 0.3
+      stroke: "#097969",
+      "stroke-width": "2",
+      "stroke-linejoin": "round",
+    },
+  
 
   // set layer colors on load  - mira
   //    "defaultLayerColorsOnLoad" :[{"layer":"0","color":"#000"},{"layer":"HIDDEN","color":"#000"},{"layer":"Border","color":"#000"},{"layer":"Title BLock","color":"#000"},{"layer":"TEXT","color":"#000"},{"layer":"PIPE2","color":"#000"},{"layer":"EQUIP","color":"#000"},{"layer":"PIPE","color":"#000"}, {"layer":"INST","color":"#000"},{"layer":"ELECT2","color":"#000"},{"layer":"HIDDEN","color":"#000"}],
@@ -249,6 +258,7 @@ const config: Config = {
                 <command>cvjs_deleteLastRedline</command>
                 <command>cvjs_undoDeleteLastRedline</command>
                 <command>cvjs_clearCurrentRedline</command>
+                <command>cvjs_adjustRedlinePoints</command>
                 <command>cvjs_About</command>
                 <command>cvjs_Settings</command>
                 <command>cvjs_Help</command>
@@ -269,6 +279,7 @@ const config: Config = {
                 <command>cvjs_rotateSpaceObject</command>
                 <command>cvjs_deleteSpaceObject</command>
                 <command>cvjs_clearSpaceObjects</command>
+                <command>cvjs_adjustSpaceObjectPoints</command>
                 <command>cvjs_bringToFront</command>
                 <command>cvjs_sendToBack</command>
                 <command>cvjs_bringForward</command>
@@ -619,6 +630,13 @@ const config: Config = {
   // todo Configuration for display logo in toolbar and also position and which one is hide when left pane is open or close
 
   enablePolygonControlPoints: true, // enable or disable polygon control points
+
+  controlPointsStyleObject : {
+      fill: '#0000FF',
+      stroke: '#00FF00',
+      opacity: '0.4',  
+      'radiusFactor' : 8
+  },
 
   // HELPER SECTION - CUSTOM COMPONENTS
 

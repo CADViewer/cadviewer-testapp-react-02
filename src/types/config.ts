@@ -83,6 +83,21 @@ export interface Config {
     "stroke-linejoin"?: string;
     "stroke-opacity"?: number | string;
   };
+  defaultSpaceObjectColor :{
+    fill: string;
+    "fill-opacity": number | string;
+    stroke: string;
+    "stroke-width": number | string;
+    "stroke-linejoin"?: string;
+    "stroke-opacity"?: number | string;
+  };
+  controlPointsStyleObject :{
+        fill: string;
+        stroke: string;
+        opacity: number | string;
+        radiusFactor: number | string;
+  };
+
   topMenuXML_config_file: string;
   setUnitForCalibrate: string;
   adjustMinimumLineThickness: number;

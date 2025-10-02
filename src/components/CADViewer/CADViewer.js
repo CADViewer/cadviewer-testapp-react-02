@@ -1581,15 +1581,7 @@ const CADViewer = ({ canvasPlanId }) => {
     if (config.enablePolygonControlPoints) {
       // 9.50.4
       cadviewer.cvjs_enablePolygonControlPoints(true);
-
-      var controlPointsStyleObject = {
-        fill: "#0000FF",
-        stroke: "#00FF00",
-        opacity: "0.9",
-        radiusFactor: 6,
-      };
-
-      cadviewer.cvjs_polygonControlsPointsStyle(controlPointsStyleObject);
+      cadviewer.cvjs_polygonControlsPointsStyle(config.controlPointsStyleObject);
     }
 
     // 9.55.6
@@ -2103,15 +2095,7 @@ const CADViewer = ({ canvasPlanId }) => {
 
     // set the space object default style object
 
-    var cvjs_defaultSpaceObjectColor = {
-      fill: "#7FFFD4",
-      "fill-opacity": "0.3", // fill opacity set to 0.3
-      stroke: "#097969",
-      "stroke-width": "2",
-      "stroke-linejoin": "round",
-    };
-
-    cadviewer.cvjs_setDefaulSpaceObjectColor(cvjs_defaultSpaceObjectColor);
+    cadviewer.cvjs_setDefaulSpaceObjectColor(config.defaultSpaceObjectColor);
 
     // SETTNGS OF CONVERSION PARAMETERS
 
