@@ -3345,10 +3345,10 @@ bytes@3.1.2:
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz"
   integrity sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==
 
-cadviewer@^10.90.24:
-  version "10.90.24"
-  resolved "https://registry.npmjs.org/cadviewer/-/cadviewer-10.90.24.tgz"
-  integrity sha512-K0aqZuQGtCh34dyUz9ICIQyXD48Ik3KvINCsHBIp84/lvAMNwib7pErb2DVQ68gvS6S4mXnfz6PJLJ0klXjTAA==
+cadviewer@^10.90.26:
+  version "10.90.26"
+  resolved "https://registry.npmjs.org/cadviewer/-/cadviewer-10.90.26.tgz"
+  integrity sha512-QbVLZmY4eyl4sn/d5TrhO+0OVbL+TOIe9sWRZAPi47YOUVCBpC1WQRGtM5Qs1pvFwSfMWiY9XW9ZUzaighuY1w==
   dependencies:
     "@eastdesire/jscolor" "^2.4.6"
     "@popperjs/core" "^2.11.8"

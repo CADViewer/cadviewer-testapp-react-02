@@ -1,6 +1,6 @@
 {
   "name": "cadviewer-visual-query-react-01",
-  "version": "10.90.24",
+  "version": "10.90.26",
   "private": true,
   "license": "TMS 1.0",
   "description": "CADViewer - JavaScript Visual Query sample implementation for ReactJS",
@@ -17,7 +17,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/react-swipeable-views": "^0.13.4",
-    "cadviewer": "^10.90.24",
+    "cadviewer": "^10.90.26",
     "canvg": "^4.0.3",
     "classnames": "^2.3.2",
     "css-select": "^5.1.0",
