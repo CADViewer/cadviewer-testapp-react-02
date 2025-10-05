@@ -2,6 +2,9 @@ import { Config } from "../types/config";
 
 export type { Config };
 
+
+/* NOTE:   this config is overlaid with the added content in config:  /src/demos/default/config.ts          */
+
 const config: Config = {
   AppName: "CADViewer: Visual Query Demo  ", //"CADViewer: CADViewer Public Demo ", //"CADViewer: Visual Query  ", //"License Keys: CADViewer Conversion Server / TailorMade REST-API Conversion Server", //"Tenants Overview Plans - Current Floor-plan", //"Standard Visual Query encapsulation of CADViewer", //"Tenants Overview Plans - Current Floor-plan", //"Standard Visual Query encapsulation of CADViewer", // "Comparez les dessins d'infrastructures ferroviaires", // BPRetail "Tenants Overview Plans - Current Floor-plan",   //  "CADViewer: Visual Query ",     // Tenants Overview Plans  &nbsp;&nbsp;- &nbsp;&nbsp;Current Floor-plan:
   ContactEmailsFlag: false, // set to true to display contact emails in the about box
@@ -16,7 +19,7 @@ const config: Config = {
   postFixServerToken: false, // true if the server shall be contatenated with a Toke, //n, kept on the Server, use a postfixed SAS token, when loading JSON content
   bearerToken: "", //"Bearer t-7614f875-8423-4f20-a674-d7cf3096290e", // "",   // security bearer token (if not applicable, set to "")
 
-  debugMode: false, // enables CADViewer debug traces in the browser
+  debugMode: true, // enables CADViewer debug traces in the browser
 
   setCADViewerLanguage: "English", // Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Chinese-Simplified", "Chinese-Traditional"
 
@@ -65,11 +68,13 @@ const config: Config = {
 
 
     defaultSpaceObjectColor :{
-      fill: "#7FFFD4",
-      "fill-opacity": "0.3", // fill opacity set to 0.3
-      stroke: "#097969",
-      "stroke-width": "2",
-      "stroke-linejoin": "round",
+
+      fill:  '#3CB043', 
+      "fill-opacity": "0.3",   
+      stroke: '#234F1E',  
+      'stroke-width': "2",
+      'stroke-linejoin': 'round',
+
     },
   
 
@@ -475,6 +480,38 @@ const config: Config = {
   CADViewerPublicDemo: true, // set the CADViewerPublicDemo to true or false
 
   //* SETTINGS OF THE COLORS OF SPACES  - blue base colors
+
+	BaseAttributes : {
+		fill: '#FFF', 
+		"fill-opacity": 0.01, 
+		stroke: '#FFF',  
+		'stroke-width': 0.1, //0.5,  // 4
+		'stroke-linejoin': 'round',
+		'stroke-opacity': 0.01,
+	},
+
+	// Location Highlight Attribute    (no separation between location types)
+	HighlightAttributes : {
+		fill: '#Ffa500' , //'#00F', //'#F4d7f4', //'#a4d7f4',
+		"fill-opacity": 0.3,
+		stroke: '#7B3804', //'#00F', // '#a4d7f4',
+		'stroke-width': 2.5, //0.2,
+		'stroke-linejoin': 'round',
+		'stroke-opacity': 1.0,
+	},
+
+	// Location Select Attribute    (no separation between location types)
+	SelectAttributes : {   // fill: '#5BBEF6',
+		fill: '#F00', //'#5BFEF6', //'#5BBEF6',
+		"fill-opacity": 0.3,
+		stroke: '#5B0303', //'#5BBEF6',
+		'stroke-linejoin': 'round',
+		'stroke-width': 4, //0.23,
+		'stroke-opacity': 1.0,
+	},
+
+
+/*
 
   BaseAttributes: {
     fill: "#ffd7f4", //'#D3D300', // '#ffd7f4', // '#FFF' , //  '#D3D300', // #D3D3D3  // #FFF   #ffd7f4
