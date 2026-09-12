@@ -55,10 +55,19 @@ ServerLocation: "",                          // Physical location override (typi
 
 **Note:** CAD files loaded from the `FolderStructure` will automatically sanitize relative folder queries and prepend the `ServerBackEndUrl` for absolute remote loading into the AutoXchange pipeline.
 
-### Official Documentation & API
-For a deep dive into the available configuration parameters, API calls, and initialization workflows, please reference the official CADViewer developer documentation:
-* **CADViewer Frontend Tech Docs:** [https://cadviewer.com/cadviewertechdocs/frontend/](https://cadviewer.com/cadviewertechdocs/frontend/)
-* **CADViewer Global API Reference:** [https://cadviewer.com/cadviewerproapi/global.html](https://cadviewer.com/cadviewerproapi/global.html)
+## Documentation & Guides
+
+For a deep dive into the available configuration parameters, API calls, and workflows, please reference the official CADViewer developer documentation:
+
+* Use the **[CADViewer API](https://cadviewer.com/cadviewerproapi/global.html)** to open and manipulate drawings in your application.
+* Read the Guide on how to **[create hotspots](https://cadviewer.com/highlight/main/)** (Space Objects). It outlines how spaces can be processed on a drawing to create interactive objects.
+* Read the Guide on how to **[modify hotspots](https://cadviewer.com/highlight2/main/)** (Space Objects). This will help you work with the visual query code in this sample.
+* The general documentation on **CADViewer** is found at: [https://cadviewer.com/cadviewertechdocs/](https://cadviewer.com/cadviewertechdocs/).
+* The general documentation on **AutoXchange** is found at: [https://cadviewer.com/autoxchangetechdocs/](https://cadviewer.com/autoxchangetechdocs/).
+
+## License
+
+**TMS 1.0**: Use freely on localhost. Commercial use requires licensing, both using entirely or in parts. Forbidden to remove license key check. Contact Tailor Made Software, [https://cadviewer.com/contact](https://cadviewer.com/contact), for more information.
 
 ---
 
