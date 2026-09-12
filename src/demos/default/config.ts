@@ -4,7 +4,7 @@ import baseConfig from "../../utils/config";
 const defaultConfig = {
   ...baseConfig,
 
-  AppName: "CADViewer: Class Components Sample - Integrated with CADViewer Conversion Server",
+  AppName: "CADViewer: React Hooks / Functional Components Sample - Integrated with CADViewer Conversion Server",
   initFileName: "/content/drawings/dwg/1st_floor_electrical.dwg", //"/content/demo_user/1st floor architectural_01.dwg", //"/content/custom/bpretail/bpretail-splash-05.svg", // the initialization drawing when loading Visual Query, based on a server path
 
 
