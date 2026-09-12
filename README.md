@@ -67,7 +67,7 @@ For a deep dive into the available configuration parameters, API calls, and work
 
 ## License
 
-**TMS 1.0**: Use freely on localhost. Commercial use requires licensing, both using entirely or in parts. Forbidden to remove license key check. Contact Tailor Made Software, [https://cadviewer.com/contact](https://cadviewer.com/contact), for more information.
+**TMS 1.0**: Use freely on localhost. Commercial use requires licensing, both using entirely or in parts. Forbidden to remove license key check. Contact Tailor Made Software/CADViewer VizQuery Technologies, [https://cadviewer.com/contact](https://cadviewer.com/contact), for more information.
 
 ---
 
