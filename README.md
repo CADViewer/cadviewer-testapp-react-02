@@ -65,6 +65,20 @@ For a deep dive into the available configuration parameters, API calls, and work
 * The general documentation on **CADViewer** is found at: [https://cadviewer.com/cadviewertechdocs/](https://cadviewer.com/cadviewertechdocs/).
 * The general documentation on **AutoXchange** is found at: [https://cadviewer.com/autoxchangetechdocs/](https://cadviewer.com/autoxchangetechdocs/).
 
+## This package contains
+
+1: [CADViewer script library](https://www.npmjs.com/package/cadviewer)  - [npm](https://www.npmjs.com/package/cadviewer) installed into ClientApp as part of React JS front-end.
+
+## This package does not contains
+
+1: The [back-end AutoXchange](https://github.com/CADViewer/cadviewer-conversion-server) conversion server and connecting scripts. Install these separately!
+
+**NOTE:** With this download, use the NodeJS CAD conversion server: https://github.com/CADViewer/cadviewer-conversion-server
+
+2: The converter folder structure contains a larger set of fonts, installed in /cadviewer/converters/autoxchange/fonts/, but a fuller set of fonts can be installed, found on our [download](https://cadviewer.com/download) site. 
+
+Read the sections on installing and handling [Fonts](https://cadviewer.com/autoxchangetechdocs/installation/fonts/) in [AutoXchange TechDocs](https://cadviewer.com/autoxchangetechdocs/) and [TroubleShooting](https://cadviewer.com/autoxchangetechdocs/troubleshooting/).
+
 ## License
 
 **TMS 1.0**: Use freely on localhost. Commercial use requires licensing, both using entirely or in parts. Forbidden to remove license key check. Contact Tailor Made Software/CADViewer VizQuery Technologies, [https://cadviewer.com/contact](https://cadviewer.com/contact), for more information.
