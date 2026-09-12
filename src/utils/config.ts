@@ -6,7 +6,7 @@ export type { Config };
 /* NOTE:   this config is overlaid with the added content in config:  /src/demos/default/config.ts          */
 
 const config: Config = {
-  AppName: "CADViewer: Visual Query Demo  ", //"CADViewer: CADViewer Public Demo ", //"CADViewer: Visual Query  ", //"License Keys: CADViewer Conversion Server / TailorMade REST-API Conversion Server", //"Tenants Overview Plans - Current Floor-plan", //"Standard Visual Query encapsulation of CADViewer", //"Tenants Overview Plans - Current Floor-plan", //"Standard Visual Query encapsulation of CADViewer", // "Comparez les dessins d'infrastructures ferroviaires", // BPRetail "Tenants Overview Plans - Current Floor-plan",   //  "CADViewer: Visual Query ",     // Tenants Overview Plans  &nbsp;&nbsp;- &nbsp;&nbsp;Current Floor-plan:
+  AppName: "CADViewer: React Visual Query Sample", //"CADViewer: CADViewer Public Demo ", //"CADViewer: Visual Query  ",
   ContactEmailsFlag: false, // set to true to display contact emails in the about box
   ContactEmails: [
     "developer@tailormade.com",

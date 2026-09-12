@@ -273,8 +273,19 @@ const Header = ({ leftPanelOpen, setLeftPanelOpen }: HeaderProps) => {
         <div className="flex flex-wrap items-center lg:ml-4 min-w-0">
           <div className="flex flex-col justify-start items-start lg:ml-4 flex-1 min-w-0">
             <div>
-              <h4>
-                <b>{config.AppName}</b>
+              <div className="flex flex-row items-center gap-4">
+                <h4 className="flex items-center gap-2 m-0">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="24" height="24" alt="React Logo" className="mt-[-4px]" />
+                  <b>{config.AppName}</b>
+                </h4>
+                
+                {/* GitHub Link Injection */}
+                <a href="https://github.com/CADViewer/cadviewer-testapp-react-02" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-700 hover:text-black no-underline">
+                  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className="w-4 h-4" alt="GitHub Logo"/>
+                  <span className="font-medium whitespace-nowrap">Pull or clone from GitHub</span>
+                </a>
+              </div>
+              <div>
                 {config.ContactEmailsFlag && (
                   <span className="ml-0 sm:ml-4 block">
                     Contact us at:{" "}
