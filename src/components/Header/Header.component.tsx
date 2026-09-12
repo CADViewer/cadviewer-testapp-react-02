@@ -280,9 +280,9 @@ const Header = ({ leftPanelOpen, setLeftPanelOpen }: HeaderProps) => {
                 </h4>
                 
                 {/* GitHub Link Injection */}
-                <a href="https://github.com/CADViewer/cadviewer-testapp-react-02" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-700 hover:text-black no-underline">
-                  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className="w-4 h-4" alt="GitHub Logo"/>
-                  <span className="font-medium whitespace-nowrap">Pull or clone from GitHub</span>
+                <a href="https://github.com/CADViewer/cadviewer-testapp-react-02" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-base font-bold no-underline px-3 py-1 rounded-md border border-gray-300 bg-gray-50 hover:bg-gray-100 whitespace-nowrap ml-2" style={{color: "#0366d6"}}>
+                  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style={{width: "20px", height: "20px"}} alt="GitHub Logo"/>
+                  <span>Pull or clone from GitHub</span>
                 </a>
               </div>
               <div>
