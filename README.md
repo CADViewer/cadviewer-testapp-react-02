@@ -1,10 +1,10 @@
-# CADViewer React Application
+# CADViewer React Application (React Hooks / Functional Components)
 
 This project is a React web application integrated with the **CADViewer Conversion Server**. It provides a modern interface to load, browse, and interact with CAD files (DWG, DGN, PDF, SVG, etc.) dynamically using the CADViewer JS API.
 
 ## 🚀 Technologies Used
 
-- **Framework:** [React](https://reactjs.org/)
+- **Framework:** [React](https://reactjs.org/) (Hooks / Functional Components)
 - **Build Tool:** [Create React App](https://github.com/facebook/create-react-app)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
