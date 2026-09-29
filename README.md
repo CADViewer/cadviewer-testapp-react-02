@@ -55,6 +55,28 @@ ServerLocation: "",                          // Physical location override (typi
 
 **Note:** CAD files loaded from the `FolderStructure` will automatically sanitize relative folder queries and prepend the `ServerBackEndUrl` for absolute remote loading into the AutoXchange pipeline.
 
+These settings can also be given at build time as environment variables (read by Create React App), without editing the code:
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `REACT_APP_SERVER_BACKEND_URL` | `http://localhost:3000` | CADViewer conversion server |
+| `REACT_APP_SERVER_URL` | URL the app is served from | Front end server |
+| `REACT_APP_SERVER_SUB_FOLDER` | none | Only show this folder of the server `content/` in *Open Files*, e.g. `demo3` |
+| `REACT_APP_INIT_FILE_NAME` | `/content/drawings/dwg/1st_floor_electrical.dwg` | Drawing loaded on start |
+
+## 🐳 Docker / Coolify
+
+The `Dockerfile` builds the app and serves the static build with nginx on port 80:
+
+```bash
+docker build -t cadviewer-testapp-react-02 \
+  --build-arg REACT_APP_SERVER_BACKEND_URL=https://server.demo.cadviewer.com \
+  --build-arg REACT_APP_SERVER_SUB_FOLDER=demo3 .
+docker run -p 3001:80 cadviewer-testapp-react-02
+```
+
+On Coolify: create a resource from this repository with the **Dockerfile** build pack (port `80`) and add the `REACT_APP_*` variables as **build variables**. `docker compose up` builds the same image against a local conversion server.
+
 ## Documentation & Guides
 
 For a deep dive into the available configuration parameters, API calls, and workflows, please reference the official CADViewer developer documentation:
