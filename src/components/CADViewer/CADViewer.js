@@ -380,7 +380,7 @@ const CADViewer = ({ canvasPlanId }) => {
       }
 
       var baseobject =
-        "http://localhost:3005/content/customInsertSpaceObjectMenu/images/sensor_c.svg";
+        config.ServerBackEndUrl + "/content/customInsertSpaceObjectMenu/images/sensor_c.svg";
       var id = "myID_" + Math.floor(Math.random() * 10000);
       var type = "sensor";
       var layer = "mylayer";

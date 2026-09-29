@@ -13,9 +13,9 @@ const config: Config = {
     "internationalsales@tailormade.com",
   ],
   ZoomFactor: 25.0, // zoom factor for cvjs_zoomHere_ObjectId() in left panel click
-  ServerBackEndUrl: "http://localhost:3000",           // This is the URL of the CADViewer back-end server
+  ServerBackEndUrl: process.env.REACT_APP_SERVER_BACKEND_URL || "http://localhost:3000", // This is the URL of the CADViewer back-end server
   ServerLocation: "", // leave blank  in most cases
-  ServerUrl: "http://localhost:3001", // this is the URL of the front end server
+  ServerUrl: process.env.REACT_APP_SERVER_URL || window.location.origin, // this is the URL of the front end server
   postFixServerToken: false, // true if the server shall be contatenated with a Toke, //n, kept on the Server, use a postfixed SAS token, when loading JSON content
   bearerToken: "", //"Bearer t-7614f875-8423-4f20-a674-d7cf3096290e", // "",   // security bearer token (if not applicable, set to "")
 
@@ -878,8 +878,8 @@ const config: Config = {
   cadViewerBrandLogoOpacity: 100, // 0 (invisible) to 100 (visible)
 
   // Server Sub Folder to open by default
-  serverSubFolder: undefined,
-  showOnlySubFolder: false,
+  serverSubFolder: process.env.REACT_APP_SERVER_SUB_FOLDER || undefined,
+  showOnlySubFolder: !!process.env.REACT_APP_SERVER_SUB_FOLDER,
   propertySVGFilesLocation: "/content/drawings/",
 };
 export default config;
